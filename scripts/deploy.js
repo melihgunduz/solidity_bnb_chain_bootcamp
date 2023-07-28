@@ -8,7 +8,7 @@ async function main() {
   console.log("Deploying contracts with the account:", deployer.address);
   console.log("Balance:", (await deployer.getBalance()).toString());
 
-  const bank = await hre.ethers.getContractFactory("Bank");
+  const bank = await hre.ethers.getContractFactory("Limiter");
   const bankContract = await bank.deploy();
 
   await bankContract.deployed();
